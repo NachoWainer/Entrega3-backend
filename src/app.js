@@ -4,11 +4,6 @@ import { ProductManager } from "./productManager.js";
 const productHandler = new ProductManager();
 
 const app =  express();
-const usuarios=[
-    {id:"1",nombre:"Nacho",genero:"M"},
-    {id:"2",nombre:"Nico",genero:"M"},
-
-]
 app.get('/products',async(req,res)=>{
     const limit = req.query.limit
     const data = await productHandler.getProducts()
